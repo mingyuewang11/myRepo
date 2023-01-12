@@ -7,6 +7,7 @@ import (
 
 func main() {
 	i := 0
+	fmt.Println("---------start---------")
 	for {
 		fmt.Println(i)
 		i++
