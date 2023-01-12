@@ -1,4 +1,9 @@
-FROM ubuntu
+FROM golang:alphine AS builder
+WORKDIR /app
+ADD . /app
+RUN go build -o main main.go
+
+FROM alphine
 WORKDIR test
-COPY ./main ./main
+COPY --from=builder /app/main .
 CMD ["./main"]
