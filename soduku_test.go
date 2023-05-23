@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestSlice(t *testing.T) {
 	k := 1
@@ -33,4 +36,8 @@ func TestSlice(t *testing.T) {
 	}
 
 	t.Log(a)
+}
+
+func test() {
+	fmt.Println("11111111111111")
 }
